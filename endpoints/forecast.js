@@ -2,6 +2,7 @@ const request = require("request-promise");
 
 const { API_KEY } = process.env;
 const API_URL = `https://api.darksky.net/forecast/${API_KEY}`;
+console.log(API_KEY);
 
 let { CORS_WHITELIST } = process.env;
 if (CORS_WHITELIST) {
@@ -27,7 +28,8 @@ exports.handler = (event, context, callback) => {
     return;
   }
 
-  const url = `${API_URL}/${lat},${lon}`;
+  //const url = `${API_URL}/${lat},${lon}`;
+  const url = `https://api.darksky.net/forecast/${API_KEY}/42.3601,-71.0589`
   // Remove lat and lon parameters, they go in the URL
   delete qs.lat;
   delete qs.lon;
