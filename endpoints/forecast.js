@@ -1,6 +1,4 @@
 const request = require("request-promise");
-const https = require('https');
-const url = require('url');
 
 const { API_KEY } = process.env;
 const API_URL = `https://api.darksky.net/forecast/${API_KEY}`;
