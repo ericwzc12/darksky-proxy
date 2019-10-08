@@ -21,9 +21,12 @@ const getResponseHeaders = request => {
 
 exports.handler = (event, context, callback) => {
   const qs = event.queryStringParameters;
-  const { lat, lon } = qs.queryStringParameters;
+  const { lat, lon } = qs;
   if (!lat || !lon) {
     callback("no lat long");
+    return;
+  } else {
+    callback("lat= " + lat + " long= " + lon);
     return;
   }
 
