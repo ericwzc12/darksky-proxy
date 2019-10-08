@@ -20,16 +20,10 @@ const getResponseHeaders = request => {
 };
 
 exports.handler = (event, context, callback) => {
-  const lon = event.queryStringParameters.lon;
-  const lat = event.queryStringParameters.lat;
-  if (!lat) {
-    callback("no lat");
-    return;
-  } else if (!lon) {
-    callback("no lon");
-    return
-  } else {
-    callback("lat= " + lat + " long= " + lon);
+  const qs = event.queryStringParameters;
+  const { lat, lon } = qs;
+  if (!lat || !lon) {
+    callback("You must provide a latitude and longitude");
     return;
   }
 
