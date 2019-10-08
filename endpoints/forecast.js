@@ -29,7 +29,7 @@ exports.handler = (event, context, callback) => {
   }
 
   //const url = `${API_URL}/${lat},${lon}`;
-  const url = `https://api.darksky.net/forecast/${API_KEY}/42.3601,-71.0589`
+  const url = `https://api.darksky.net/forecast/0123456789abcdef9876543210fedcba/42.3601,-71.0589`
   // Remove lat and lon parameters, they go in the URL
   delete qs.lat;
   delete qs.lon;
