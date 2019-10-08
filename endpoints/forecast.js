@@ -37,7 +37,7 @@ exports.handler = (event, context, callback) => {
     qs,
     json: true
   };
-  request(url, options)
+  request(url)
     .then(response => {
       callback(null, {
         body: JSON.stringify(response),
