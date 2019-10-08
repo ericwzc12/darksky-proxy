@@ -20,8 +20,8 @@ const getResponseHeaders = request => {
 };
 
 exports.handler = (event, context, callback) => {
-  const lat = event.queryStringParameters.lat;
   const lon = event.queryStringParameters.lon;
+  const lat = event.queryStringParameters.lat;
   if (!lat) {
     callback("no lat");
     return;
