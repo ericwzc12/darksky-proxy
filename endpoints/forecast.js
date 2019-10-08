@@ -23,7 +23,7 @@ exports.handler = (event, context, callback) => {
   const qs = event.queryStringParameters;
   const { lat, lon } = qs;
   if (!lat || !lon) {
-    callback(qs);
+    callback(json.stringify(qs));
     return;
   }
 
