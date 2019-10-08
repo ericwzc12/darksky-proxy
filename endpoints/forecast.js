@@ -23,7 +23,7 @@ exports.handler = (event, context, callback) => {
   const qs = event.queryStringParameters;
   const { lat, lon } = qs;
   if (!lat || !lon) {
-    callback("You must provide a latitude and longitude");
+    callback(qs);
     return;
   }
 
