@@ -1,3 +1,4 @@
 [build]
-  command = "netlify-lambda build endpoints/"
+  command = "yarn build"
   functions = "endpoints"
+  publish = "build"
