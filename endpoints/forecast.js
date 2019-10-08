@@ -46,6 +46,6 @@ exports.handler = (event, context, callback) => {
       });
     })
     .catch(error => {
-      callback(error);
+      callback("called but error");
     });
 };
